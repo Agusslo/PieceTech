@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HARDWARE PIECE</title>
+    <title>PIECE TECH</title>
     <!-- Favicon-->
     <link rel="icon" href="icono.png" type="image/png" />
     <link
@@ -16,14 +16,14 @@
     <!-- PANTALLA DE BIENVENIDA (PRELOADER) -->
     <div id="preloader">
       <div class="loader-text mono">
-        HARDWARE<span class="highlight">PIECE</span>
+        PIECE<span class="highlight">TECH</span>
       </div>
       <div class="loader-bar"></div>
     </div>
 
     <!-- NAVBAR -->
     <nav>
-      <div class="logo">HARDWARE<span class="highlight"> PIECE</span></div>
+      <div class="logo">PIECE<span class="highlight"> TECH</span></div>
       <!-- Botón de Menú Hamburguesa para Móviles -->
       <button
         class="mobile-menu-toggle"
@@ -38,6 +38,7 @@
         <li><a href="#proceso">Proceso</a></li>
         <li><a href="#resultados">Resultados</a></li>
         <li><a href="#planes">Planes</a></li>
+        <li><a href="#switch" class="nav-switch-link">🎮 SWITCH</a></li>
         <li><a href="#faq">FAQ</a></li>
         <!-- En móviles, el botón de reserva se mueve adentro del menú desplegable -->
         <li class="mobile-only-btn">
@@ -222,12 +223,118 @@
           <p style="color: #888; font-size: 0.9rem">Configuración quirúrgica. Reestructuramos la comunicación del silicio con la memoria RAM. El techo absoluto.</p>
           <ul class="features">
             <li>Todo el nivel Performance</li>
-            <li>Prioridad de Nivel KERNEL (Valor 38)</li> <!-- Agregado -->
-            <li>USB Polling Fix & Latencia IRQ</li> <!-- Agregado -->
-            <li>Desactivación de Telemetría Pro</li> <!-- Agregado -->
+            <li>Prioridad de Nivel KERNEL (Valor 38)</li>
+            <li>USB Polling Fix & Latencia IRQ</li>
+            <li>Desactivación de Telemetría Pro</li>
             <li>RAM Timings Manuales (Max FPS)</li>
           </ul>
           <button class="btn w-100" style="margin-top: 20px" onclick="openModal('Elite')">SELECCIONAR ELITE</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN SWITCH
+    ========================================== -->
+    <section id="switch" class="switch-section reveal">
+      <div class="switch-bg-glow"></div>
+
+      <div class="switch-header">
+        <div class="subtitle mono">// NINTENDO SWITCH</div>
+        <h2>
+          LE PONEMOS SWITCH<br /><span class="highlight-switch">A TU MAGIA</span>
+        </h2>
+        <p class="switch-desc">
+          Verificamos la compatibilidad de tu consola con el número de serie y le instalamos el CFW vía microSD. Sin tocar el hardware, sin riesgo. <br/>
+          <span class="mono switch-serial-hint">🔍 Pasanos tu número de serie y te confirmamos si es compatible al instante.</span>
+        </p>
+        <div class="switch-badge-row">
+          <span class="switch-badge mono">VÍA MICRO SD</span>
+          <span class="switch-badge mono">SIN SOLDADURA</span>
+          <span class="switch-badge mono">CFW HEKATE</span>
+          <span class="switch-badge mono">JUEGOS ILIMITADOS</span>
+        </div>
+      </div>
+
+      <div class="switch-cards-container">
+
+        <!-- SD 64GB -->
+        <div class="card switch-card reveal">
+          <div class="switch-card-icon">💾</div>
+          <h3>STARTER</h3>
+          <div class="switch-sd-label mono">MicroSD 64 GB</div>
+          <div class="price">A CONFIRMAR <span class="currency">ARS</span></div>
+          <div class="session-time mono">INSTALACIÓN INCLUIDA</div>
+          <p style="color: #888; font-size: 0.9rem; margin-top: 10px;">
+            Ideal para comenzar. Suficiente para los clásicos y los títulos más populares.
+          </p>
+          <ul class="features switch-features">
+            <li>~2-3 juegos aprox. <span class="mono" style="color:#888; font-size:0.75rem;">(títulos AAA)</span></li>
+            <li>Hekate + Atmosphere preinstalados</li>
+            <li>~30 GB ocupados por CFW y sistema</li>
+            <li>Verificación de compatibilidad</li>
+            <li>Soporte post-instalación</li>
+          </ul>
+          <button class="btn switch-btn w-100" style="margin-top: 20px;" onclick="openSwitchModal('Starter – MicroSD 64GB')">
+            CONSULTAR PRECIO
+          </button>
+        </div>
+
+        <!-- SD 128GB -->
+        <div class="card switch-card switch-card-mid reveal" style="transition-delay: 0.1s">
+          <div class="switch-card-icon">🎮</div>
+          <h3>PRO</h3>
+          <div class="switch-sd-label mono">MicroSD 128 GB</div>
+          <div class="price">A CONFIRMAR <span class="currency">ARS</span></div>
+          <div class="session-time mono">INSTALACIÓN INCLUIDA</div>
+          <p style="color: #888; font-size: 0.9rem; margin-top: 10px;">
+            La opción más popular. Una librería decente sin preocuparte por el espacio seguido.
+          </p>
+          <ul class="features switch-features">
+            <li>~5-6 juegos aprox. <span class="mono" style="color:#888; font-size:0.75rem;">(títulos AAA)</span></li>
+            <li>Hekate + Atmosphere preinstalados</li>
+            <li>~95 GB libres para juegos</li>
+            <li>Verificación de compatibilidad</li>
+            <li>Soporte post-instalación</li>
+          </ul>
+          <button class="btn switch-btn w-100" style="margin-top: 20px;" onclick="openSwitchModal('Pro – MicroSD 128GB')">
+            CONSULTAR PRECIO
+          </button>
+        </div>
+
+        <!-- SD 256GB -->
+        <div class="card switch-card switch-card-elite reveal" style="transition-delay: 0.2s">
+          <div class="switch-card-icon">⚡</div>
+          <h3>ELITE</h3>
+          <div class="switch-sd-label mono">MicroSD 256 GB</div>
+          <div class="price">A CONFIRMAR <span class="currency">ARS</span></div>
+          <div class="session-time mono">INSTALACIÓN INCLUIDA</div>
+          <p style="color: #888; font-size: 0.9rem; margin-top: 10px;">
+            Para el coleccionista. Una librería completa sin tener que borrar nada jamás.
+          </p>
+          <ul class="features switch-features">
+            <li>~11-13 juegos aprox. <span class="mono" style="color:#888; font-size:0.75rem;">(títulos AAA)</span></li>
+            <li>Hekate + Atmosphere preinstalados</li>
+            <li>~223 GB libres para juegos</li>
+            <li>Verificación de compatibilidad</li>
+            <li>Soporte post-instalación VIP</li>
+          </ul>
+          <button class="btn switch-btn switch-btn-elite w-100" style="margin-top: 20px;" onclick="openSwitchModal('Elite – MicroSD 256GB')">
+            CONSULTAR PRECIO
+          </button>
+        </div>
+
+      </div>
+
+      <!-- CTA SERIAL -->
+      <div class="switch-serial-cta reveal">
+        <div class="switch-serial-box">
+          <span class="mono" style="color: var(--switch-cyan); font-size: 0.8rem; letter-spacing: 2px;">// VERIFICÁ TU CONSOLA</span>
+          <h3>¿TU SWITCH ES COMPATIBLE?</h3>
+          <p style="color: #888; font-size: 0.95rem;">Pasanos el número de serie de tu Switch y te decimos en el acto si puede recibir el CFW por microSD. El número lo encontrás en la parte de abajo de la consola.</p>
+          <button class="btn switch-btn" onclick="openSwitchModal('Consulta de compatibilidad')">
+            VERIFICAR MI NÚMERO DE SERIE →
+          </button>
         </div>
       </div>
     </section>
@@ -332,11 +439,21 @@
               </p>
             </div>
           </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿El Switch pierde la garantía? <span class="icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Técnicamente sí, como cualquier modificación de firmware. Sin embargo, el proceso es 100% por software vía microSD, no tocamos el hardware. Además, en Argentina la garantía de Nintendo ya es muy limitada. ¡El riesgo es mínimo y los beneficios enormes!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- MODAL DE RESERVA -->
+    <!-- MODAL DE RESERVA (PC) -->
     <div id="modalReserva" class="modal-overlay">
       <div class="modal-content">
         <div class="modal-header">
@@ -418,6 +535,84 @@
         </div>
       </div>
     </div>
+
+    <!-- MODAL DE SWITCH -->
+    <div id="modalSwitch" class="modal-overlay">
+      <div class="modal-content modal-switch-content">
+        <div class="modal-header">
+          <h2>🎮 CONSULTA SWITCH</h2>
+          <button class="close-btn" onclick="closeSwitchModal()">✕</button>
+        </div>
+
+        <div class="status-indicator mono">
+          <span class="dot" style="background: var(--switch-cyan); box-shadow: 0 0 10px var(--switch-cyan);"></span>
+          RESPONDEMOS AL INSTANTE
+        </div>
+
+        <form id="formSwitch" class="form-grid">
+          <div class="input-group">
+            <label class="mono">// TU NOMBRE</label>
+            <input type="text" id="swNombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="input-group">
+            <label class="mono">// PLAN SWITCH</label>
+            <select id="swPlan">
+              <option value="Consulta de compatibilidad">Verificar compatibilidad</option>
+              <option value="Starter – MicroSD 64GB">Starter – MicroSD 64GB</option>
+              <option value="Pro – MicroSD 128GB">Pro – MicroSD 128GB</option>
+              <option value="Elite – MicroSD 256GB">Elite – MicroSD 256GB</option>
+            </select>
+          </div>
+          <div class="input-group full-width">
+            <label class="mono">// NÚMERO DE SERIE DE TU SWITCH</label>
+            <input type="text" id="swSerial" placeholder="Ej: XAW10012345678 (lo encontrás abajo de la consola)" />
+          </div>
+          <div class="input-group full-width">
+            <label class="mono">// CONSULTA / COMENTARIOS (OPCIONAL)</label>
+            <textarea
+              id="swConsulta"
+              rows="3"
+              placeholder="Contanos qué modelo tenés, dudas, etc..."
+            ></textarea>
+          </div>
+
+          <div class="input-group full-width terms-group">
+            <label class="checkbox-container">
+              <input type="checkbox" id="swTerms" required />
+              <span class="checkmark"></span>
+              <span class="terms-text"
+                >He leído y acepto los
+                <a href="#" onclick="mostrarTerminos(); return false;" class="highlight">Términos de Servicio</a>.</span
+              >
+            </label>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-wa full-width switch-wa-btn"
+            onclick="enviarSwitchWhatsApp()"
+          >
+            CONSULTAR VÍA WHATSAPP →
+          </button>
+        </form>
+        <div class="modal-footer mono">
+          VERIFICACIÓN GRATIS · INSTALACIÓN EN TU DOMICILIO O REMOTA
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a
+      href="https://wa.me/5491123756940"
+      target="_blank"
+      class="whatsapp-float"
+      aria-label="Contactar por WhatsApp"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span class="whatsapp-float-tooltip mono">¡Chateá con nosotros!</span>
+    </a>
 
     <script src="main.js"></script>
   </body>

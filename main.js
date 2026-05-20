@@ -65,7 +65,7 @@ faqQuestions.forEach((question) => {
 });
 
 // ==========================================
-// LÓGICA DEL MODAL DE RESERVAS
+// LÓGICA DEL MODAL DE RESERVAS (PC)
 // ==========================================
 const modal = document.getElementById("modalReserva");
 
@@ -97,16 +97,46 @@ modal.addEventListener("click", (e) => {
 });
 
 // ==========================================
+// LÓGICA DEL MODAL DE SWITCH
+// ==========================================
+const modalSwitch = document.getElementById("modalSwitch");
+
+function openSwitchModal(planName = "Consulta de compatibilidad") {
+  navLinksContainer.classList.remove("active");
+  mobileMenuToggle.textContent = "☰";
+
+  modalSwitch.classList.add("active");
+  document.body.style.overflow = "hidden";
+
+  const select = document.getElementById("swPlan");
+  for (let i = 0; i < select.options.length; i++) {
+    if (select.options[i].value === planName) {
+      select.selectedIndex = i;
+      break;
+    }
+  }
+}
+
+function closeSwitchModal() {
+  modalSwitch.classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+
+modalSwitch.addEventListener("click", (e) => {
+  if (e.target === modalSwitch) closeSwitchModal();
+});
+
+// ==========================================
 // MOSTRAR TÉRMINOS DE SERVICIO
 // ==========================================
 function mostrarTerminos() {
   alert(
-    "Al contratar el servicio, asumo la responsabilidad por las modificaciones en mi hardware/software. Hardware Piece opera dentro de márgenes seguros.",
+    "Al contratar el servicio, asumo la responsabilidad por las modificaciones en mi hardware/software. Piece Tech opera dentro de márgenes seguros.",
   );
 }
 
 // ==========================================
-// LÓGICA DE ENVÍO A WHATSAPP
+// LÓGICA DE ENVÍO A WHATSAPP (PC)
 // ==========================================
 function enviarWhatsApp() {
   const miNumero = "5491123756940";
@@ -128,7 +158,7 @@ function enviarWhatsApp() {
     return;
   }
 
-  let mensaje = `*NUEVA RESERVA - HARDWARE PIECE*\n\n`;
+  let mensaje = `*NUEVA RESERVA - PIECE TECH*\n\n`;
   mensaje += `*Nombre:* ${nombre}\n`;
   mensaje += `*Plan elegido:* ${plan}\n`;
   mensaje += `*Horario preferido:* A las ${horario} hs.\n`;
@@ -139,6 +169,48 @@ function enviarWhatsApp() {
   }
 
   mensaje += `¡Hola! Vengo desde la página web para arrancar mi sesión de optimización.`;
+
+  const mensajeCodificado = encodeURIComponent(mensaje);
+  const urlAPI = `https://wa.me/${miNumero}?text=${mensajeCodificado}`;
+
+  window.open(urlAPI, "_blank");
+}
+
+// ==========================================
+// LÓGICA DE ENVÍO A WHATSAPP (SWITCH)
+// ==========================================
+function enviarSwitchWhatsApp() {
+  const miNumero = "5491123756940";
+
+  const nombre = document.getElementById("swNombre").value.trim();
+  const plan = document.getElementById("swPlan").value;
+  const serial = document.getElementById("swSerial").value.trim();
+  const consulta = document.getElementById("swConsulta").value.trim();
+  const terms = document.getElementById("swTerms").checked;
+
+  if (!nombre) {
+    alert("Por favor, ingresá tu nombre.");
+    return;
+  }
+
+  if (!terms) {
+    alert("Debes aceptar los Términos de Servicio para continuar.");
+    return;
+  }
+
+  let mensaje = `*🎮 CONSULTA SWITCH - PIECE TECH*\n\n`;
+  mensaje += `*Nombre:* ${nombre}\n`;
+  mensaje += `*Plan de interés:* ${plan}\n`;
+
+  if (serial) {
+    mensaje += `*Número de serie:* ${serial}\n`;
+  }
+
+  if (consulta) {
+    mensaje += `\n*Consulta:*\n${consulta}\n`;
+  }
+
+  mensaje += `\n¡Hola! Vengo desde la web para consultar sobre el servicio de Switch.`;
 
   const mensajeCodificado = encodeURIComponent(mensaje);
   const urlAPI = `https://wa.me/${miNumero}?text=${mensajeCodificado}`;
